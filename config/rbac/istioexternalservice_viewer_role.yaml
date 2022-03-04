@@ -1,0 +1,20 @@
+# permissions for end users to view istioexternalservices.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: istioexternalservice-viewer-role
+rules:
+- apiGroups:
+  - istio.rodbate.github.com
+  resources:
+  - istioexternalservices
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - istio.rodbate.github.com
+  resources:
+  - istioexternalservices/status
+  verbs:
+  - get

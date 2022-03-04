@@ -1,0 +1,24 @@
+# permissions for end users to edit istioexternalservices.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: istioexternalservice-editor-role
+rules:
+- apiGroups:
+  - istio.rodbate.github.com
+  resources:
+  - istioexternalservices
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - istio.rodbate.github.com
+  resources:
+  - istioexternalservices/status
+  verbs:
+  - get

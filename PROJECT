@@ -1,0 +1,16 @@
+domain: istio.rodbate.github.com
+layout:
+- go.kubebuilder.io/v3
+projectName: istio-external-service-operator
+repo: github.com/rodbate/istio-external-service-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: istio.rodbate.github.com
+  group: istio.rodbate.github.com
+  kind: IstioExternalService
+  path: github.com/rodbate/istio-external-service-operator/api/v1
+  version: v1
+version: "3"
